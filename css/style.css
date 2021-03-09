@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'TT Norms';
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.container {
+  max-width: 1054px;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: local("TT Norms Pro Regular"), local("TT-Norms-Pro-Regular"), url("../fonts/TTNormsPro-Regular.woff2") format("woff2"), url("../fonts/TTNormsPro-Regular.woff") format("woff"), url("../fonts/TTNormsPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: local("TT Norms Pro Medium"), local("TT-Norms-Pro-Medium"), url("../fonts/TTNormsPro-Medium.woff2") format("woff2"), url("../fonts/TTNormsPro-Medium.woff") format("woff"), url("../fonts/TTNormsPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+}
+
+.header__container {
+  padding-top: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header__logo {
+  width: 111px;
+  height: 31px;
+}
+
+.header__menu {
+  max-width: 433px;
+  width: 100%;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
