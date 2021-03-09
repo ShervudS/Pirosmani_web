@@ -8,3 +8,4 @@ emptyLinks.forEach( (item) => {
         e.preventDefault();
     });
 });
+

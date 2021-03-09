@@ -5,10 +5,9 @@
     height: 100px;
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.12);
     &__container{
-        padding-top: 34px;
         display: flex;
         justify-content: space-around;
-        align-items: flex-start;
+        align-items: center;
     }
     &__logo{
         width: 111px;
@@ -19,9 +18,85 @@
         width: 100%;
     }
 }
+.burger-icon{
+    position: relative;
+    display: none;
+    width: 30px;
+    height: 25px;
+}
+.burger-line{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color:#000;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 -15px;
+    border-radius: 10px;
+    transition: all .3s ease 0s;
+    &::after{
+        display: block;
+        width: 11px;
+        height: 2px;
+        background-color:#000;
+        content:'';
+        margin-top: 7.6px;
+        border-radius: 10px;
+        transition: all .3s ease 0s;
+    }
+    &::before{
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color:#000;
+        content:'';
+        margin-top: -4.6px;
+        border-radius: 10px;
+        transition: all .3s ease 0s;;
+    }
+    &.activ{
+        height: 0;
+        &::after{
+            transform: rotate(-135deg);
+            margin-top: 8px;
+        }
+        &::before{
+            transform: rotate(135deg);
+            margin: -2px 0 -9px 0;
+        }
+    }
+}
 .menu{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    &__item{
+        padding: .5em 1em;
+        text-decoration: none;
+        font-weight: 500;
+        color: $darkGrey;
+    }
+}
+.icons{
+    display: flex;
+    align-items: center;
+    &__item{
+        cursor: pointer;
+        padding: 5px;
+        & + .icons__item{
+            margin-left: 25px;
+        }
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        color: #000;
+        & > p{
+            margin-left: 5px;
+        }
+    }
 }
 @import '_media.scss';

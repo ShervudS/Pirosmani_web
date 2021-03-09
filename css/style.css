@@ -43,15 +43,14 @@
 }
 
 .header__container {
-  padding-top: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__logo {
@@ -64,6 +63,67 @@
   width: 100%;
 }
 
+.burger-icon {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 25px;
+}
+
+.burger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 0 0 -15px;
+  border-radius: 10px;
+  -webkit-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+
+.burger-line::after {
+  display: block;
+  width: 11px;
+  height: 2px;
+  background-color: #000;
+  content: '';
+  margin-top: 7.6px;
+  border-radius: 10px;
+  -webkit-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+
+.burger-line::before {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  content: '';
+  margin-top: -4.6px;
+  border-radius: 10px;
+  -webkit-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+
+.burger-line.activ {
+  height: 0;
+}
+
+.burger-line.activ::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  margin-top: 8px;
+}
+
+.burger-line.activ::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin: -2px 0 -9px 0;
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,4 +134,59 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.menu__item {
+  padding: .5em 1em;
+  text-decoration: none;
+  font-weight: 500;
+  color: #343E48;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icons__item {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.icons__item + .icons__item {
+  margin-left: 25px;
+}
+
+.icons__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  color: #000;
+}
+
+.icons__link > p {
+  margin-left: 5px;
+}
+
+@media (max-width: 880px) {
+  .icons__link p {
+    display: none;
+  }
+}
+
+@media (max-width: 690px) {
+  .header__menu {
+    display: none;
+  }
+  .burger-icon {
+    display: block;
+  }
 }
