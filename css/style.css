@@ -128,19 +128,77 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .menu__item {
-  padding: .5em 1em;
-  text-decoration: none;
+  position: relative;
+  min-width: 87px;
+}
+
+.menu__item--link {
+  padding: .5em .5em;
+  font-size: 18px;
+  line-height: 22px;
   font-weight: 500;
   color: #343E48;
+  text-decoration: none;
+}
+
+.submenu {
+  padding: .5em 20px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #343E48;
+  -webkit-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+
+.submenu.activ {
+  padding: 15px 20px 15px 25px;
+  min-width: 158px;
+  position: absolute;
+  top: -26px;
+  left: -5px;
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.submenu__icon {
+  max-width: 17px;
+  max-height: 17px;
+  margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.submenu__item {
+  display: none;
+}
+
+.submenu__item.activ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  margin-top: 16px;
+  cursor: pointer;
 }
 
 .icons {
@@ -158,7 +216,7 @@
 }
 
 .icons__item + .icons__item {
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 .icons__link {
@@ -176,13 +234,46 @@
   margin-left: 5px;
 }
 
+.modal {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.modal__content {
+  min-width: 303px;
+  padding: 28px 45px 25px 45px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.modal__close {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
 @media (max-width: 880px) {
   .icons__link p {
     display: none;
   }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 740px) {
   .header__menu {
     display: none;
   }
