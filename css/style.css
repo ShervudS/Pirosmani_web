@@ -234,8 +234,10 @@
   margin-left: 5px;
 }
 
-.modal {
-  display: none;
+.modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -248,6 +250,10 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.12);
+}
+
+.modal.hide {
+  display: none;
 }
 
 .modal__content {
@@ -265,6 +271,73 @@
   top: 15px;
   right: 15px;
   cursor: pointer;
+}
+
+.login-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-in__title {
+  margin-top: 13px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000;
+}
+
+.login-in__input-tel {
+  margin-top: 28px;
+  display: block;
+  padding: 19px;
+  border: 1px solid #EBEBEB;
+  border-radius: 17.5px;
+}
+
+.login-in__input-pass {
+  margin-top: 25px;
+  display: block;
+  padding: 19px;
+  border: 1px solid #EBEBEB;
+  border-radius: 17.5px;
+}
+
+.login-in__forgot-pass {
+  margin: 14px;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: underline;
+  color: #00AC4E;
+}
+
+.login-in__btn {
+  background-color: #00AC4E;
+  color: #fff;
+  padding: 13px;
+  width: 143px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-in__reg {
+  margin-top: 24px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.login-in__reg-link {
+  color: #00AC4E;
+  text-decoration: none;
 }
 
 @media (max-width: 880px) {

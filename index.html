@@ -104,7 +104,7 @@
                     <a href="tel:+7 (831) 282-60-00" class="icons__link icon-phone"> <p>+7 (831) 282-60-00</p> </a>
                 </div>
                 <div class="icons__item">
-                    <a href="" class="icons__link icon-user"></a>
+                    <button data-modal-btn="user" class="icons__link icon-user"></button>
                 </div>
                 <div class="icons__item">
                     <a href="" class="icons__link icon-backet"></a>
@@ -114,11 +114,20 @@
     </header>
 
     <!-- modal login in -->
-    <div class="modal">
-        <div class="modal__content">
-            <div class="modal__close">
+    <div data-modal="user" class="modal hide">
+        <div class="modal__content login-in">
+            <div data-close class="modal__close">
                 <img src="img/icons/close.png" alt="">
             </div>
+            <div class="login-in__icon">
+                <div class="icon-user"></div>
+            </div>
+            <h4 class="login-in__title">Войти в личный кабинет</h4>
+            <input type="tel" name="" placeholder="Телефон" class="login-in__input-tel">
+            <input type="password" name=""  placeholder="Пароль" class="login-in__input-pass">
+            <a href="" class="login-in__forgot-pass">Забыли пароль?</a>
+            <button type="submit" class="login-in__btn">Войти</button>
+            <p class="login-in__reg"> Впервые у нас? <a href="" class="login-in__reg-link">Зарегистрироваться</a> </p>
         </div>
     </div>
 
