@@ -30,8 +30,10 @@ subMenu.addEventListener('mouseout', () => {
 const btnCloseModal = document.querySelectorAll('[data-close]'),
       btnOpenModal = document.querySelectorAll('[data-modal-btn]'),
       BtnOpenModalLogin = document.querySelector('[data-modal-btn="user"]'),
+      btnRegisterUser = document.querySelector('.login-in__reg-link'),
       modal = document.querySelectorAll('[data-modal]'),
-      modalUser = document.querySelector('[data-modal="user"]');
+      modalUser = document.querySelector('[data-modal="user"]'),
+      modalRegister = document.querySelector('[data-modal="register"]');
 
 BtnOpenModalLogin.addEventListener('click', ()=>{
     modalUser.classList.add('show');
@@ -64,14 +66,9 @@ document.addEventListener('keydown', (e) =>{
         closeModal();
     }
 });
-giy
 
-
-//       function closeModal() {
-//     modalWindow.classList.add('hide');
-//     modalWindow.classList.remove('show');
-//     document.body.style.overflow = '';
-// }
-// modalBtnClose.forEach( (item) => {
-//     this.addEventListener('click', closeModal);
-// });
+btnRegisterUser.addEventListener('click', () =>{
+    closeModal();
+    modalRegister.classList.remove('hide');
+    modalRegister.classList.add('show');
+})

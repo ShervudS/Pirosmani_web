@@ -142,6 +142,8 @@
         align-items: center;
         font-weight: 500;
         color: #000;
+        background-color: transparent;
+        cursor: pointer;
         & > p{
             margin-left: 5px;
         }
@@ -179,6 +181,27 @@
         right: 15px;
         cursor: pointer;
     }
+    &__title{
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        color: #000;
+    }
+    &__input-tel,
+    &__input-pass{
+        display: block;
+        padding: 19px;
+        border: 1px solid #EBEBEB;
+        border-radius: 17.5px;
+        width: 100%;
+    }
+    &__btn{
+        background-color: $green;
+        color: #fff;
+        padding: 13px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
 }
 
 .login-in{
@@ -187,24 +210,12 @@
     align-items: center;
     &__title{
         margin-top: 13px;
-        font-weight: 500;
-        font-size: 17px;
-        line-height: 21px;
-        color: #000;
     }
     &__input-tel{
         margin-top: 28px;
-        display: block;
-        padding: 19px;
-        border: 1px solid #EBEBEB;
-        border-radius: 17.5px;
     }
     &__input-pass{
         margin-top: 25px;
-        display: block;
-        padding: 19px;
-        border: 1px solid #EBEBEB;
-        border-radius: 17.5px;
     }
     &__forgot-pass{
         margin: 14px;
@@ -230,8 +241,46 @@
         &-link{
             color: $green;
             text-decoration: none;
+            background-color: transparent;
         }
     }
 }
+
+.register{
+    display: flex;
+    & > form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 290px;
+    }
+    &__input-tel{
+        margin-top: 30px;
+    }
+    &__input-pass{
+        margin-top: 27px;
+    }
+    & label{
+        width: 100%;
+        font-size: 9px;
+        line-height: 14px;
+        display: flex;
+    }
+    &__check,
+    &__rad{
+        margin-right: 15px;
+    }
+    &__link{
+        color: $green;
+    }
+    &__btn{
+        margin-top: 38px;
+        &:invalid{
+            background-color: $darkGrey;
+            color: $green;
+        }
+    }
+}
+
 
 @import '_media.scss';

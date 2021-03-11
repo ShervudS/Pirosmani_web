@@ -228,6 +228,8 @@
           align-items: center;
   font-weight: 500;
   color: #000;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .icons__link > p {
@@ -273,6 +275,29 @@
   cursor: pointer;
 }
 
+.modal__title {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000;
+}
+
+.modal__input-tel, .modal__input-pass {
+  display: block;
+  padding: 19px;
+  border: 1px solid #EBEBEB;
+  border-radius: 17.5px;
+  width: 100%;
+}
+
+.modal__btn {
+  background-color: #00AC4E;
+  color: #fff;
+  padding: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .login-in {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,26 +313,14 @@
 
 .login-in__title {
   margin-top: 13px;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 21px;
-  color: #000;
 }
 
 .login-in__input-tel {
   margin-top: 28px;
-  display: block;
-  padding: 19px;
-  border: 1px solid #EBEBEB;
-  border-radius: 17.5px;
 }
 
 .login-in__input-pass {
   margin-top: 25px;
-  display: block;
-  padding: 19px;
-  border: 1px solid #EBEBEB;
-  border-radius: 17.5px;
 }
 
 .login-in__forgot-pass {
@@ -338,6 +351,61 @@
 .login-in__reg-link {
   color: #00AC4E;
   text-decoration: none;
+  background-color: transparent;
+}
+
+.register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.register > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 290px;
+}
+
+.register__input-tel {
+  margin-top: 30px;
+}
+
+.register__input-pass {
+  margin-top: 27px;
+}
+
+.register label {
+  width: 100%;
+  font-size: 9px;
+  line-height: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.register__check, .register__rad {
+  margin-right: 15px;
+}
+
+.register__link {
+  color: #00AC4E;
+}
+
+.register__btn {
+  margin-top: 38px;
+}
+
+.register__btn:invalid {
+  background-color: #343E48;
+  color: #00AC4E;
 }
 
 @media (max-width: 880px) {

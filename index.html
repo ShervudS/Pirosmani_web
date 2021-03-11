@@ -122,15 +122,51 @@
             <div class="login-in__icon">
                 <div class="icon-user"></div>
             </div>
-            <h4 class="login-in__title">Войти в личный кабинет</h4>
-            <input type="tel" name="" placeholder="Телефон" class="login-in__input-tel">
-            <input type="password" name=""  placeholder="Пароль" class="login-in__input-pass">
+            <h4 class="modal__title login-in__title">Войти в личный кабинет</h4>
+            <input type="tel" name="" placeholder="Телефон" class="modal__input-tel login-in__input-tel">
+            <input type="password" name=""  placeholder="Пароль" class="modal__input-pass login-in__input-pass">
             <a href="" class="login-in__forgot-pass">Забыли пароль?</a>
             <button type="submit" class="login-in__btn">Войти</button>
-            <p class="login-in__reg"> Впервые у нас? <a href="" class="login-in__reg-link">Зарегистрироваться</a> </p>
+            <p class="login-in__reg"> Впервые у нас? 
+                <button class="login-in__reg-link">Зарегистрироваться</button>
+            </p>
         </div>
     </div>
 
+    <!-- modal registration -->
+    <div data-modal="register" class="modal show">
+        <div class="modal__content register">
+            <div data-close class="modal__close">
+                <img src="img/icons/close.png" alt="">
+            </div>
+            <!-- content -->
+            <form action="register">
+                <div class="register__icon">
+                    <div class="icon-user"></div>
+                </div>
+                <h4 class="modal__title register__title">Регистрация</h4>
+                <input type="tel" placeholder="Телефон" class="modal__input-tel register__input-tel">
+                <input type="password" placeholder="Пароль" class="modal__input-pass register__input-pass">
+                <input type="password" placeholder="Подтвердите пароль" class="modal__input-pass register__input-pass">
+                <label>
+                    <input type="checkbox" class="register__check">
+                    <p>
+                        Хочу получать выгодные предложения от магазина
+                    </p> 
+                </label>
+                <label>
+                    <input type="radio" class="register__rad">
+                    <p>
+                        Принимаю условия 
+                        <a href="" class="register__link">Политики конфиденциальности</a>
+                        <a href="" class="register__link"> Пользовательского соглашения</a>, 
+                    </p>  
+                </label>
+
+                <button type="submit" class="modal__btn register__btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
     <script src="script/script.js"></script>
 </body>
 </html>
