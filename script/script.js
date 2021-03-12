@@ -30,10 +30,11 @@ subMenu.addEventListener('mouseout', () => {
 const btnCloseModal = document.querySelectorAll('[data-close]'),
       btnOpenModal = document.querySelectorAll('[data-modal-btn]'),
       BtnOpenModalLogin = document.querySelector('[data-modal-btn="user"]'),
-      btnRegisterUser = document.querySelector('.login-in__reg-link'),
+      linkRegisterUser = document.querySelector('.login-in__reg-link'),
       modal = document.querySelectorAll('[data-modal]'),
       modalUser = document.querySelector('[data-modal="user"]'),
-      modalRegister = document.querySelector('[data-modal="register"]');
+      modalRegister = document.querySelector('[data-modal="register"]'),
+      modalSubscribe = document.querySelector('[data-modal="subscribe"]');
 
 BtnOpenModalLogin.addEventListener('click', ()=>{
     modalUser.classList.add('show');
@@ -67,8 +68,30 @@ document.addEventListener('keydown', (e) =>{
     }
 });
 
-btnRegisterUser.addEventListener('click', () =>{
+linkRegisterUser.addEventListener('click', () =>{
     closeModal();
     modalRegister.classList.remove('hide');
     modalRegister.classList.add('show');
+})
+
+
+// disable btn registration, subscribe
+const btnRegister = document.querySelector('.register__btn'),
+      btnSubscribe = document.querySelector('.modal-subscribe__btn');
+
+btnRegister.addEventListener('click', (e) => {
+    e.preventDefault();
+});
+btnSubscribe.addEventListener('click', (e) => {
+    e.preventDefault();
+});
+
+// subscribe
+const linkModalSubscribe = document.querySelector('.subscribe__btn');
+
+linkModalSubscribe.addEventListener('click', (e) =>{
+    e.preventDefault();
+    modalSubscribe.classList.remove('hide');
+    modalSubscribe.classList.add('show');
+
 })

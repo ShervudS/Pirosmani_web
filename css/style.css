@@ -352,6 +352,7 @@
   color: #00AC4E;
   text-decoration: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .register {
@@ -383,6 +384,7 @@
 }
 
 .register label {
+  margin-top: 14px;
   width: 100%;
   font-size: 9px;
   line-height: 14px;
@@ -406,6 +408,106 @@
 .register__btn:invalid {
   background-color: #343E48;
   color: #00AC4E;
+}
+
+.modal-subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-subscribe__title {
+  margin-top: 18px;
+  max-width: 270px;
+  text-align: center;
+}
+
+.modal-subscribe form {
+  margin-top: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-subscribe__btn {
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #EDEDF7;
+  border-radius: 18px;
+}
+
+.subscribe__form {
+  padding: 40px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.subscribe__title {
+  font-family: 'TT Hoves';
+  font-weight: 400;
+  font-size: 31px;
+}
+
+.subscribe__subtitle {
+  margin-top: 9px;
+  font-family: 'TT Hoves';
+  font-weight: 400;
+  font-size: 19px;
+  color: #828282;
+}
+
+.subscribe__btn {
+  margin-top: 31px;
+  display: block;
+  padding: 10px 30px;
+  background-color: #00AC4E;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'TT Hoves';
+  font-weight: 500;
+  color: #fff;
+  font-size: 25px;
+}
+
+.subscribe__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media (max-width: 880px) {

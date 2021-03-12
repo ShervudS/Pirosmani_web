@@ -133,8 +133,25 @@
         </div>
     </div>
 
+    <!-- navigation -->
+    <nav class="navigation">
+        <div class="navigation__container container">
+            <div class="subscribe">
+                <form class="subscribe__form">
+                    <h2 class="subscribe__title">Подарок на первый заказ.</h2>
+                    <p class="subscribe__subtitle">Получите 500 рублей за подписку на рассылку</p>
+                    <button class="subscribe__btn">Подписаться</button>
+                </form>
+                <div class="subscribe__img">
+                    <img src="img/img_subscribe.png" alt="">
+                </div>
+                
+            </div>  
+        </div>
+    </nav>
+
     <!-- modal registration -->
-    <div data-modal="register" class="modal show">
+    <div data-modal="register" class="modal hide">
         <div class="modal__content register">
             <div data-close class="modal__close">
                 <img src="img/icons/close.png" alt="">
@@ -164,6 +181,24 @@
                 </label>
 
                 <button type="submit" class="modal__btn register__btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- modal subccribe -->
+    <div data-modal="subscribe" class="modal hide">
+        <div class="modal__content modal-subscribe">
+            <div data-close class="modal__close">
+                <img src="img/icons/close.png" alt="">
+            </div>
+            <!-- content -->
+            <div class="modal-subscribe__icon">
+                <div class="icon-user"></div>
+            </div>
+            <h4 class="modal__title modal-subscribe__title">Подпишитесь на нашу рассылку и получите промокод на 500 RUB!</h4>
+            <form action="modal-subscribe">
+                <input type="email" placeholder="E-mail" class="modal__input-pass modal-subscribe__input-nail">
+                <button type="" class="modal__btn modal-subscribe__btn">Отправить</button>
             </form>
         </div>
     </div>
