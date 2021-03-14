@@ -25,6 +25,7 @@
     display: none;
     width: 30px;
     height: 25px;
+    cursor: pointer;
 }
 .burger-line{
     display: block;
@@ -308,7 +309,10 @@
         line-height: 23px;
     }
 }
-
+// navigation
+.navigation{
+    padding-top: 60px;
+}
 // subscribe
 .subscribe{
     display: flex;
@@ -340,6 +344,7 @@
         background-color: $green;
         border-radius: 5px;
         cursor: pointer;
+        outline-style: none;
 
         font-family: 'TT Hoves';
         font-weight: 500;
@@ -355,4 +360,102 @@
         }
     }
 }
+.swiper-container{
+    width: 100%;
+}
+
+
+// Catalog
+.catalog{
+    margin-top: 12px;
+    &__container{
+        display: flex;
+        flex-direction: column;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 19px;
+        color:#000;
+    }
+    &__tiles{
+        margin: 29px -20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        @supports (display: grid){
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 206px);
+            column-gap: 10px;
+            row-gap: 56px;
+            justify-content: space-around;
+        }
+
+    }
+    &__item{
+        margin: 0 20px 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 206px;
+    }
+}
+.item{
+    &__img{
+        width: 100%;
+        padding: 25px;
+        border-radius: 5px;
+        background-color: #E5E5E5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title{
+        margin-top: 9px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__decoration{
+        margin-top: 5px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+    }
+    &__raiting{
+        margin-top: 5px;
+        display: flex;
+    }
+    &__price{
+        margin-top: 9px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000;
+        &--weight{
+            margin-left: 18px;
+            font-weight: 400;
+            font-size: 12px;
+            color: $lightGrey;
+        }
+    }
+    &__btn{
+        margin-top: 13px;
+        padding: 9px 27px;
+        background-color: $green;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 13px;
+        color: #fff;
+    }
+}
+
+
+
 @import '_media.scss';

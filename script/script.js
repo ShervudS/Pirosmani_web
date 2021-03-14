@@ -95,3 +95,10 @@ linkModalSubscribe.addEventListener('click', (e) =>{
     modalSubscribe.classList.add('show');
 
 })
+
+
+// swiper navigation
+let swiper = new Swiper('.swiper-container', {
+   slidesPerView: 3,
+});
+  
