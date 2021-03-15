@@ -3,6 +3,9 @@
     
 }
 @media(max-width: 880px) {
+    .header{
+        height: 50px;
+    }
     .icons__link p{
         display: none;
     }
@@ -13,6 +16,9 @@
     }
     .burger-icon{
         display: block;
+    }
+    .promo-delivery__img{
+        display: none;
     }
 }
 @media(max-width: 480px) {

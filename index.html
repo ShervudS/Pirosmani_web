@@ -114,25 +114,7 @@
         </div>
     </header>
 
-    <!-- modal login in -->
-    <div data-modal="user" class="modal hide">
-        <div class="modal__content login-in">
-            <div data-close class="modal__close">
-                <img src="img/icons/close.png" alt="">
-            </div>
-            <div class="login-in__icon">
-                <div class="icon-user"></div>
-            </div>
-            <h4 class="modal__title login-in__title">Войти в личный кабинет</h4>
-            <input type="tel" name="" placeholder="Телефон" class="modal__input-tel login-in__input-tel">
-            <input type="password" name=""  placeholder="Пароль" class="modal__input-pass login-in__input-pass">
-            <a href="" class="login-in__forgot-pass">Забыли пароль?</a>
-            <button type="submit" class="login-in__btn">Войти</button>
-            <p class="login-in__reg"> Впервые у нас? 
-                <button class="login-in__reg-link">Зарегистрироваться</button>
-            </p>
-        </div>
-    </div>
+
 
     <!-- navigation -->
     <div class="navigation">
@@ -166,7 +148,8 @@
             </nav>           
         </div>
     </div>
-
+    
+    <!-- catalog -->
     <section class="catalog">
         <div class="catalog__container container">
             <h2 class="catalog__title">Все товары</h2>
@@ -419,6 +402,47 @@
         </div>
     </section>
 
+    <!-- movies -->
+    <section class="movies">
+
+    </section>
+
+    <!-- promo delivery -->
+    <section class="promo-delivery">
+        <div class="promo-delivery__container container">
+            <div class="promo-delivery__item">
+                <h2 class="promo-delivery__title">Бесплатная доставка 
+                    по Москве и Области от 2999 RUB!</h2>
+                <a href="" class="promo-delivery__link">Оформить</a>
+            </div>
+            <div class="promo-delivery__item">
+                <div class="promo-delivery__img">
+                    <img src="img/promo-delivery.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal login in -->
+    <div data-modal="user" class="modal hide">
+        <div class="modal__content login-in">
+            <div data-close class="modal__close">
+                <img src="img/icons/close.png" alt="">
+            </div>
+            <div class="login-in__icon">
+                <div class="icon-user"></div>
+            </div>
+            <h4 class="modal__title login-in__title">Войти в личный кабинет</h4>
+            <input type="tel" name="" placeholder="Телефон" class="modal__input-tel login-in__input-tel">
+            <input type="password" name=""  placeholder="Пароль" class="modal__input-pass login-in__input-pass">
+            <a href="" class="login-in__forgot-pass">Забыли пароль?</a>
+            <button type="submit" class="login-in__btn">Войти</button>
+            <p class="login-in__reg"> Впервые у нас? 
+                <button class="login-in__reg-link">Зарегистрироваться</button>
+            </p>
+        </div>
+    </div>
+
     <!-- modal registration -->
     <div data-modal="register" class="modal hide">
         <div class="modal__content register">
@@ -471,7 +495,43 @@
             </form>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__contacts">
+                <div class="contacts__item">
+                        Бесплатный звонок по РФ
+                        <a href="tel:+78312826000" class="contacts__tel--link">+7 (831) 282-60-00</a>
+                </div>
+                <div class="contacts__item">
+                        Для приема заказов
+                        <a href="tel:+79040664685" class="contacts__tel--link">+7 (904) 066-46-85</a>
+                </div>
+                <div class="contacts__item">
+                    <div class="contacts__social">
+                        <a href="" class="contacts__social--link">Мы в вконтакте ></a>
+                        <a href="" class="contacts__social--link">Мы в instagram ></a>
+                    </div>
+                </div>
+                <div class="contacts__item">
+                    <button data-modal-btn="user" class="contacts__login-in--link">Войти / Регистрация</button>
+                </div>
+            </div>
+            <div class="footer__about-us">
+                <p class="about-us__open-hous">График работы по будням с 9:00 до 18:00</p>
+                <a class="about-us__mail-link" href="mailto:info@.ru">Email: info@.ru</a>
+                <a class="about-us__support-link" href="">Поддержка</a>
+                <div class="about-us__docs">
+                    <p class="docs__item">©2020. Пиросмани</p>
+                    <a class="docs__item" href="">Условия и соглашения</a>
+                    <a class="docs__item" href="">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
     <script src="script/script.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 </body>
 </html>
